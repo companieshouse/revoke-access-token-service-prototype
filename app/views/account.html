@@ -4,36 +4,8 @@
   GOV.UK Prototype Kit
 {% endblock %}
 {% block beforeContent %}
-  <div class="js-toggle-nav" id="global-nav">
-    <a href="#navigation" class="js-header-toggle">interactiondesign@companieshouse.gov.uk</a>
-    <nav role="navigation" class="content">
-      <ul id="navigation" class="mobile-hidden">
+  {% include "includes/header.html" %}
 
-        <li id="signed-in-user" class="user">interactiondesign@companieshouse.gov.uk:
-        </li>
-
-        <li>
-          <a href="/user/account">Your details</a>
-        </li>
-
-        <li>
-          <a id="recent_filings" href="https://beta.companieshouse.gov.uk/user/transactions">Your filings</a>
-        </li>
-
-        <li>
-          <a id="companies_you_follow" href="https://follow.companieshouse.gov.uk">Companies you follow</a>
-        </li>
-
-        <li>
-          <a id="user-signout" href="/signout">Sign out</a>
-        </li>
-
-      </ul>
-      <!--admin bar-->
-
-      <!--end bar-->
-    </nav>
-  </div>
 {% endblock %}
 {% block content %}
   <h1 class="govuk-heading-xl">Your details</h1>
