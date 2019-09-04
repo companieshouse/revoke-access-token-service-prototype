@@ -11,77 +11,29 @@
 }) }}
 {% endblock %}
 {% block content %}
-  <h1 class="govuk-heading-xl">Manage Access</h1>
-  {{ govukSummaryList({
-    rows: [
-      {
-        key: {
-          text: "Name"
-        },
-        value: {
-          text: "Sarah Philips"
-        },
-        actions: {
-          items: [
-            {
-              href: "#",
-              text: "Change",
-              visuallyHiddenText: "name"
-            }
-          ]
-        }
-      },
-      {
-        key: {
-          text: "Date of birth"
-        },
-        value: {
-          text: "5 January 1978"
-        },
-        actions: {
-          items: [
-            {
-              href: "#",
-              text: "Change",
-              visuallyHiddenText: "date of birth"
-            }
-          ]
-        }
-      },
-      {
-        key: {
-          text: "Contact information"
-        },
-        value: {
-          html: "72 Guild Street<br>London<br>SE23 6FH"
-        },
-        actions: {
-          items: [
-            {
-              href: "#",
-              text: "Change",
-              visuallyHiddenText: "contact information"
-            }
-          ]
-        }
-      },
-      {
-        key: {
-          text: "Contact details"
-        },
-        value: {
-          html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
-        },
-        actions: {
-          items: [
-            {
-              href: "#",
-              text: "Change",
-              visuallyHiddenText: "contact details"
-            }
-          ]
-        }
-      }
-    ]
-  }) }}
+  <h1 class="govuk-heading-xl">Third-party apps</h1>
+  <h2 class="govuk-heading-l">About apps</h2>
+  <p class="govuk-body">Third-party apps are applications built on the Companies House platform by external developers, and are not owned or operated by Companies House.
+  </p>
+
+  <p>When you connect a third-party app to your Companies House account, you are granting that app access to use your account.</p>
+  <p>Depending on its permissions, an authorized app may be able to obtain information from and use your account in various ways...</p>
+  <h2 class="govuk-heading-l">Manage apps</h2>
+  <h3 class="govuk-heading-m">Company App Name</h3>
+  <p class="govuk-body">Optional description of the app</p>
+  <p class="govuk-body">
+    <a href="#">Terms and conditions</a>
+  </p>
+  <p class="govuk-body">
+    <a href="#">Privacy policy</a>
+  </p>
+  <h4 class="govuk-heading-s">Permissions</h4>
+  <p class="govuk-body">Access: Read and write</p>
+
+  <p class="govuk-body">Approved: Monday, March 30, 2015 at 10:55:22 PM GMT+01:00</p>
+  {{ govukButton({
+  text: "Revoke Access",
+  classes: "govuk-button--warning",
+  href: "revoke-access.html"
+}) }}
 {% endblock %}
