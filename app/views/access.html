@@ -31,31 +31,31 @@
       <h4 class="govuk-heading-s">Permissions</h4>
       {{ govukSummaryList({
         classes: 'govuk-summary-list--no-border',
-  rows: [
-    {
-      key: {
-        text: "Read"
-      },
-      value: {
-        text: "App can view company data"
-      }
-    },
-    {
-      key: {
-        text: "Write"
-      },
-      value: {
-        text: "App can submit and edit accounts"
-      }
-    }
-  ]
-}) }}
+        rows: [
+          {
+            key: {
+              text: "Read"
+            },
+            value: {
+              text: "App can view company data"
+            }
+          },
+          {
+            key: {
+              text: "Write"
+            },
+            value: {
+              text: "App can submit and edit accounts"
+            }
+          }
+        ]
+     }) }}
       <p class="govuk-body-s">Approved on Monday, March 30, 2015 at 10:55:22 PM GMT+01:00</p>
       {{ govukButton({
-    text: "Remove access",
-    classes: "govuk-button--warning",
-    href: "revoke-access.html"
-  }) }}
+       text: "Remove access",
+       classes: "govuk-button--warning",
+       href: "revoke-access.html"
+     }) }}
       <h2 class="govuk-heading-l">About apps</h2>
       <p class="govuk-body">Third-party apps are software applications created by external developers for use with Companies House services. They are not created or owned by Companies House.
       </p>
