@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/header.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "account.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Change email address</h1>
+      <p>Current email address is</p>
+      <p>
+        <strong>interactiondesign@companieshouse.gov.uk</strong>
+      </p>
+      {{ govukInput({
+        label: {
+          text: "Enter new email address"
+        },
+        id: "new-email",
+        name: "new-email"
+      }) }}
+      {{ govukInput({
+        label: {
+          text: "Re-enter new email address",
+          classes: "govuk-!-margin-top-8"
+        },
+        id: "confirm-email",
+        name: "confirm-email"
+      }) }}
+      {{ govukInput({
+        label: {
+          text: "Enter password"
+        },
+        id: "enter-password",
+        type: "password",
+        name: "enter-password"
+      }) }}
+      {{ govukButton({
+        text: "Send confirmation email",
+        href: ""
+      }) }}
+    </div>
+  </div>
+{% endblock %}
