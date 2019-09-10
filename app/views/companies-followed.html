@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/header.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "account.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Companies you follow</h1>
+      <p>No companies are currently being followed.</p>
+    </div>
+  </div>
+{% endblock %}

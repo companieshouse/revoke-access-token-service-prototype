@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/header.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "account.html"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Your filings</h1>
+      <p>You have not filed anything on Companies House beta service.</p>
+    </div>
+  </div>
+{% endblock %}
