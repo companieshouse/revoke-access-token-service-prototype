@@ -14,18 +14,22 @@
 {% endblock %}
 {% block content %}
   <h1 class="govuk-heading-xl">Revoke access</h1>
+
   <p class="govuk-body-l">You are about to revoke access to the following application.</p>
-  <h3 class="govuk-heading-m">Company App Name</h3>
-  <p>Optional description of the app</p>
-  <p>
-    <a href="#">Third party T&C's</a>
-  </p>
-  <p>
-    <a href="#">Third party privacy policy</a>
-  </p>
+  <h3 class="govuk-heading-m">{{ case.app }}</h3>
+  <p>{{case.description}}</p>
+  <ul class="govuk-list">
+    <li>
+      <a class="govuk-link" href="#">Terms and conditions</a>
+    </li>
+    <li>
+      <a class="govuk-link" href="#">Privacy policy</a>
+    </li>
+  </ul>
   <h4 class="govuk-heading-s">Permissions</h4>
   <p>Read and write</p>
-  <p>Approved: Monday, March 30, 2015 at 10:55:22 PM GMT+01:00</p>
+  <p>Approved:
+    {{ case.approved }}</p>
   {{ govukButton({
   text: "Confirm",
   classes: "govuk-button--warning",
