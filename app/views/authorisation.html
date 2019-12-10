@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Authorise
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <h1 class="govuk-heading-xl">You are about to authorise **insert company name**</h1>
+      <p class="govuk-body">They will be able to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>View company data</li>
+        <li>Submit and edit accounts</li>
+      </ul>
+      {{ govukButton({
+        text: "Allow access",
+        classes: "govuk-!-margin-right-1"
+      }) }}
+
+      {{ govukButton({
+        text: "Cancel",
+        classes: "govuk-button--secondary"
+      }) }}
+    </div>
+  </div>
+{% endblock %}
