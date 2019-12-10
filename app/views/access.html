@@ -16,44 +16,25 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Third-party apps</h1>
+      <h1 class="govuk-heading-xl">Third-party applications</h1>
 
-      <h2 class="govuk-heading-l">Manage apps</h2>
       {% for case in cases %}
         {% if case.show === true %}
-          <h3 class="govuk-heading-m">{{ case.app }}</h2>
+          <h3 class="govuk-heading-l">{{ case.app }}</h2>
           <p class="govuk-body">{{case.description}}</p>
           <ul class="govuk-list">
             <li>
-              <a class="govuk-link" href="#">Terms and conditions</a>
+              <a class="govuk-link" href="#">Sage 50cloud terms and conditions</a>
             </li>
             <li>
-              <a class="govuk-link" href="#">Privacy policy</a>
+              <a class="govuk-link" href="#">Sage 50cloud privacy policy</a>
             </li>
           </ul>
           <h4 class="govuk-heading-s">Permissions</h4>
-
-          {{ govukSummaryList({
-          classes: 'govuk-summary-list--no-border',
-          rows: [
-            {
-              key: {
-                text: "Read"
-              },
-              value: {
-                text: "App can view company data"
-              }
-            },
-            {
-              key: {
-                text: "Write"
-              },
-              value: {
-                text: "App can submit and edit accounts"
-              }
-            }
-          ]
-       }) }}
+          <ul class="govuk-list govuk-list--bullet">
+            <li>View company data</li>
+            <li>Submit and edit accounts</li>
+          </ul>
           <p class="govuk-body-s">Approved on
             {{ case.approved }}</p>
           {% set buttonHref = "revoke-access?id=" +  case.id %}
@@ -65,8 +46,9 @@
        }) }}
         {% endif %}
       {% endfor %}
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-      <h2 class="govuk-heading-l">About apps</h2>
+      <h2 class="govuk-heading-l">About third-party applications</h2>
       <p class="govuk-body">Third-party apps are software applications created by external developers for use with Companies House services. They are not created or owned by Companies House.
       </p>
       <p>You can choose to connect a third-party app to your Companies House account. This will give it permission to access company information.</p>

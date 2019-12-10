@@ -1,13 +1,13 @@
 module.exports = [
   {
     id: 0,
-    app: 'Company App Name',
-    description: 'Optional description of the app',
+    app: 'Sage 50cloud',
+    description: 'Sage 50cloud is a set of accountancy and payroll products developed by Sage Group aimed at small and medium enterprises.',
     terms: 'url',
     privacy: 'url',
     show: true,
     read: true,
     write: true,
-    approved: 'Monday, March 30, 2015 at 10:55:22 PM GMT+01:00'
+    approved: 'March 30 2015 at 10:55pm'
   }
 ]
