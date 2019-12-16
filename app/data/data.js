@@ -8,6 +8,6 @@ module.exports = [
     show: true,
     read: true,
     write: true,
-    approved: 'March 30 2015 at 10:55pm'
+    approved: '30 March 2015 at 10:55pm'
   }
 ]
