@@ -21,6 +21,7 @@
       {% for case in cases %}
         {% if case.show === true %}
           <h3 class="govuk-heading-l">{{ case.app }}</h2>
+          <p class="govuk-body">Software provided by **insert company name**</p>
           <p class="govuk-body">{{case.description}}</p>
           <ul class="govuk-list">
             <li>
